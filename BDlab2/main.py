@@ -24,7 +24,6 @@ def remove_outliers(column):
     filtered_column = column[(column >= lower_bound) & (column <= upper_bound)]
     return filtered_column
 
-# Визуализация выбросов
 for col in data.columns[:5]:
     # Замена выбросов на медиану
     data[col] = remove_outliers(data[col])
